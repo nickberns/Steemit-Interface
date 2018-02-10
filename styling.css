@@ -1,0 +1,51 @@
+body {
+    background-color: #ccf2ff; /*Interface color: Lightblue*/
+}
+
+#title{
+  margin: 10 0 10 0px;
+}
+
+h1 {
+    color: #006622; /*Title color: Darkgreen*/
+    padding: 20px 0 0 220px;
+    margin-top: 40px;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+input {
+  width: 98%;
+  padding: 1%;
+}
+
+.text-info{
+  margin: auto;
+  width: 50%;
+  border: 3px solid green; /*Bottom box color: Green*/
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.credentials{
+  margin: auto;
+  width: 50%;
+  border: 3px solid green; /*Bottom box color: Green*/
+  padding: 10px;
+}
+
+#postingKey{
+margin-bottom: 15px;
+}
+
+#postIt{
+    background-color: #00802b; /*Button color: Green*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}

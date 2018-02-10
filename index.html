@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="styling.css">
+<html>
+<head>
+<title>My Steemit Interface</title></head>
+<body>
+<h1>My Personal Steemit Interface</h1>
+<div class="text-info">
+Title of article:<br> <input cols="110" id="title" type="text" ><br/>
+Article text:<br><textarea rows="20" cols="90" id="article"></textarea><br/>
+</div>
+<div class="credentials">
+Username: <input id="username" type="text" placeholder="Steemit username without '@'"><br/>
+Private Posting Key: <input id="postingKey" type="password" size="65" placeholder="Your secret posting key"><br/>
+<input id="postIt" type="button" value="Post it!" onClick=postArticle()>
+</div>
+</body>
+</html>
+
+<script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+<script language="JavaScript">
+function postArticle()
+{
+  steem.broadcast.comment(
+    document.getElementById('postingKey').value, // posting wif
+    '', // author, leave blank for new post
+    'steemtest', // first tag
+    document.getElementById('username').value, // username
+    'name-of-my-test-article-post', // permlink
+    document.getElementById('title').value, // Title
+    document.getElementById('article').value, // Body of post
+    // json metadata (additional tags, app name, etc)
+    { tags: ['test'], app: 'steemjs-test!' },
+    function (err, result) {
+      if (err)
+        alert('Failure! ' + err);
+      else
+        alert('Success!');
+    }
+  );
+}
+</script>
